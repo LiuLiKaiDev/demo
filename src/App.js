@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import Counter from './components/Counter'
+
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const couterRef = useRef()
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +21,17 @@ function App() {
         >
           Learn React
         </a>
+        <Counter ref={couterRef} />
       </header>
+      {/* 外部读取函数组件内的方法和变量 */}
+      <button
+        onClick={() => {
+          const count = couterRef.current.getCount()
+          console.log(count)
+        }
+      }>
+        点击获取count
+      </button>
     </div>
   );
 }

@@ -6,8 +6,9 @@ function Counter(props, ref) {
   const getCount = () => {
     return count
   }
-
+  // 暴露内部方法
   useImperativeHandle(ref, () => ({
+    setCount,
     getCount
   }))
 

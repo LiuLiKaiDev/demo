@@ -8,30 +8,21 @@ function App() {
   const couterRef = useRef()
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div style={{ padding: 10 }}>
         <Counter ref={couterRef} />
-      </header>
-      {/* 外部读取函数组件内的方法和变量 */}
-      <button
-        onClick={() => {
-          const count = couterRef.current.getCount()
-          console.log(count)
-        }
-      }>
-        点击获取count
-      </button>
+      </div>
+      <div>
+        {/* 外部读取函数组件内的方法和变量 */}
+        <button
+          onClick={() => {
+            // const count = couterRef.current.getCount()
+            // console.log(count)
+            couterRef.current.setCount(0)
+          }
+        }>
+          将count设置为0
+        </button>
+      </div>
     </div>
   );
 }

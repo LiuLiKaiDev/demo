@@ -1,0 +1,29 @@
+.app__col {
+	display: inline-block;
+	padding: 7px;
+	box-sizing: border-box;
+}
+
+.app__col--large {
+	width: 50%;
+}
+
+.app__col--medium {
+	width: 25%;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+	.app__col--medium {
+		width: 33.33%;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.app__col--medium {
+		width: 50%;
+	}
+
+	.app__col--large {
+		width: 100%;
+	}
+}

@@ -1,0 +1,51 @@
+.app__collaspe { }
+
+.app__collaspe__header {
+    height: 70px;
+}
+
+.app__collaspe__title {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    color: #00599E;
+    padding: 23px 0;
+    cursor: pointer;
+    /* position: sticky; */
+    top: 0;
+    padding-right: 30px;
+}
+
+.app__collaspe__content {
+    /* max-height: 2000px; */
+    /* opacity: 1; */
+    margin: 0 -7px;
+    /* padding-right: 30px; */
+    transition: max-height 0.4s ease-out;
+    overflow: hidden;
+}
+
+.app__collaspe__content--close {
+    max-height: 0;
+    /* opacity: 0; */
+    border-bottom: 2px solid rgb(201, 201, 201)
+}
+
+.app__collaspe__title::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #377CB2;
+    border-bottom: 2px solid #377CB2;
+    right: 5px;
+    top: 32px;
+    transform: rotate(-45deg);
+    transition: transform 0.4s ease-out;
+}
+
+.app__collaspe__title--close::after {
+    transform: rotate(-135deg);
+}

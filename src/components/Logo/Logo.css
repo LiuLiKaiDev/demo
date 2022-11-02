@@ -1,0 +1,9 @@
+.app__logo {
+	height: 77px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.app__logo__img {
+	height: 100%;
+}

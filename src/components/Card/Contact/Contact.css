@@ -1,0 +1,8 @@
+.app__card__contact {
+    width: 188px;
+    margin: 15px auto ;
+    display: flex;
+    justify-content: space-between;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+}

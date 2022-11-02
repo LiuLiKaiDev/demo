@@ -1,0 +1,24 @@
+
+
+.app__tag {
+    min-width: 0px;
+    height: 16px;
+    line-height: 16px;
+    display: inline;
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.app__tag--avaliable {
+    background-color: #E0FBCD;
+    color: #408B0A;
+}
+
+.app__tag--invaliable {
+    background-color: #FFDBDA;
+    color: #E2706D;
+
+}

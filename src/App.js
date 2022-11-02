@@ -1,30 +1,48 @@
-import React, { useRef } from 'react';
-import Counter from './components/Counter'
-
-import logo from './logo.svg';
+import React from 'react';
+import Header from './components/Header'
+import Nav from './components/Nav'
+import Title from './components/Title'
+import Collaspe from './components/common/Collaspe'
+import Col from './components/common/Col'
+import Card from './components/Card'
 import './App.css';
 
 function App() {
-  const couterRef = useRef()
+
   return (
-    <div className="App">
-      <div style={{ padding: 10 }}>
-        <Counter ref={couterRef} />
-      </div>
-      <div>
-        {/* 外部读取函数组件内的方法和变量 */}
-        <button
-          onClick={() => {
-            // const count = couterRef.current.getCount()
-            // console.log(count)
-            couterRef.current.setCount(0)
-          }
-        }>
-          将count设置为0
-        </button>
-      </div>
+    <div className="app">
+      <Header />
+      <section className="app__body">
+        <Nav />
+        <section className="app__content">
+          <Title title="Customer Service" />
+          <Collaspe title="Primary Contact(s)">
+            <Col size="large"><Card size="large"/></Col>
+            <Col size="large"><Card size="large" status="invailable"/></Col>
+          </Collaspe>
+          <Collaspe title="Banking Services">
+            <Col size="medium"><Card size="medium"/></Col>
+            <Col size="medium"><Card size="medium" status='invailable'/></Col>
+            <Col size="medium"><Card size="medium"/></Col>
+            <Col size="medium"><Card size="medium"/></Col>
+          </Collaspe>
+          <Collaspe title="Wealth Management">
+            <Col size="medium"><Card size="medium"/></Col>
+            <Col size="medium"><Card size="medium" status='invailable'/></Col>
+            <Col size="medium"><Card size="medium"/></Col>
+          </Collaspe>
+          <Collaspe title="Wealth Management">
+            <Col size="medium"><Card size="medium"/></Col>
+            <Col size="medium"><Card size="medium" status='invailable'/></Col>
+            <Col size="medium"><Card size="medium"/></Col>
+            <Col size="medium"><Card size="medium" status='invailable'/></Col>
+            <Col size="medium"><Card size="medium"/></Col>
+          </Collaspe>
+        </section>
+      </section>
     </div>
   );
+  
 }
 
 export default App;

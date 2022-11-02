@@ -1,0 +1,31 @@
+.app__card {
+	position: relative;
+	padding: 25px;
+	border-radius: 10px;
+	border:1px solid #EEF0F1;
+	background-color: #fff;
+	box-shadow: #eef0f1 1px 5px 15px;
+	/* margin-right: 10px; */
+}
+
+.app__card--large .app__card__user__info {
+	justify-content: flex-start;
+}
+
+.app__card--large .app__card__item__description {
+	height: 75px;
+	padding-left: 20px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	text-overflow: inherit;
+	white-space: inherit;
+}
+
+.app__card--large .app__card__contact {
+	width: 160px;
+	position: absolute;
+	top: 24px;
+	right: 20px;
+}
